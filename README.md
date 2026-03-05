@@ -1,7 +1,7 @@
 # ruleshttp
 
 [![CI](https://github.com/argemma-oss/ruleshttp/actions/workflows/ci.yml/badge.svg)](https://github.com/argemma-oss/ruleshttp/actions/workflows/ci.yml)
-[![Go Reference](https://pkg.go.dev/badge/argemma-oss/ruleshttp.svg)](https://pkg.go.dev/argemma-oss/ruleshttp)
+[![Go Reference](https://pkg.go.dev/badge/argemma-oss/ruleshttp.svg)](https://pkg.go.dev/github.com/argemma-oss/ruleshttp)
 
 > [!NOTE]
 > `ruleshttp` is currently a beta-quality library.
