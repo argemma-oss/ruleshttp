@@ -1,0 +1,21 @@
+pre_request:
+  # Not matched by any test request; present to exercise multi-rule evaluation.
+  - name: unused-allow-post-data
+    match: Method == "POST" && Path == "/data"
+    authorize: "false"
+  # Allows GET /data through to the server. Checks both Method and Path
+  # to exercise multi-condition matching.
+  - name: allow-get-data
+    match: Method == "GET" && Path == "/data"
+    authorize: ALL
+pre_response:
+  # Not matched by any test response; present to exercise multi-rule evaluation.
+  - name: unused-allow-created
+    match: StatusCode == 201
+    authorize: "false"
+  # Allows the response when it is a 200 with the expected JSON body. Checks
+  # both StatusCode and Body to exercise multi-condition matching and to
+  # verify that the body remains readable by the caller after policy evaluation.
+  - name: allow-ok-body
+    match: StatusCode == 200 && Body == "{\"ok\":true}"
+    authorize: ALL

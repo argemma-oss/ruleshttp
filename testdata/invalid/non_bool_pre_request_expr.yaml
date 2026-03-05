@@ -1,0 +1,4 @@
+pre_request:
+  - name: not-bool
+    match: "0"
+    authorize: ALL

@@ -1,0 +1,15 @@
+pre_request:
+  - name: allow-get
+    match: 'Method == "GET"'
+    authorize: ALL
+  - name: allow-health
+    match: 'Path == "/health"'
+    authorize: ALL
+
+pre_response:
+  - name: allow-2xx
+    match: 'StatusCode >= 200 && StatusCode < 300'
+    authorize: ALL
+  - name: allow-404
+    match: 'StatusCode == 404'
+    authorize: ALL

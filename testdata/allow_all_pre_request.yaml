@@ -1,0 +1,4 @@
+pre_request:
+  - name: allow-all
+    match: ANY
+    authorize: ALL

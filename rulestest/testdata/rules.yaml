@@ -1,0 +1,12 @@
+pre_request:
+  - name: allow-get-api
+    match: Path startsWith "/api/"
+    authorize: Method == "GET"
+  - name: allow-post-api
+    match: Path startsWith "/api/"
+    authorize: Method == "POST"
+
+pre_response:
+  - name: allow-success
+    match: ANY
+    authorize: StatusCode >= 200 && StatusCode < 300

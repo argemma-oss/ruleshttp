@@ -1,0 +1,8 @@
+pre_request:
+  - name: allow-get
+    match: Method == "GET"
+    authorize: ALL
+pre_response:
+  - name: allow-2xx
+    match: StatusCode >= 200 && StatusCode < 300
+    authorize: ALL

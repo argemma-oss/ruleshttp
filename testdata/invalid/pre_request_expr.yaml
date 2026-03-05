@@ -1,0 +1,4 @@
+pre_request:
+  - name: bad
+    match: NonExistentField == 1
+    authorize: ALL

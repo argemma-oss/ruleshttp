@@ -1,0 +1,4 @@
+pre_response:
+  - name: bad
+    match: NoSuchField
+    authorize: ALL
